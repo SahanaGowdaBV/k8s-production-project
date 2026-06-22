@@ -12,6 +12,13 @@ spec:
   selector:
     matchLabels:
       app: devops-app
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "200m"
+      memory: "256Mi"
   template:
     metadata:
       labels:
