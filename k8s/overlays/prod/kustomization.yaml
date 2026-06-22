@@ -1,0 +1,16 @@
+resources:
+  - ../../base
+
+namePrefix: prod-
+
+commonLabels:
+  env: prod
+
+patches:
+  - target:
+      kind: Deployment
+      name: devops-app
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 3
